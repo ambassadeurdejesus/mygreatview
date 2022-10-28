@@ -2,7 +2,7 @@ var player = document.getElementById('radioPlayer');
 var radioVolume = document.getElementById('radioVol');
 var userVolume = 50;
 
-waveAfterWave();
+
 
 $('.button-play').click(function() {
   icon = $(this).find('i');
