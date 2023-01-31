@@ -56,7 +56,46 @@ redirect();
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+   <script> 
+    document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
   
+  // Expose
+  window.player = player;
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+  </script>
+    <script src='https://cdn.plyr.io/3.4.6/plyr.js'></script> 
   
   
 </head>
@@ -109,8 +148,8 @@ redirect();
                       
                         <h5 class="card-title mbr-fonts-style display-7"><strong>Une radio pour les enfants et les jeunes</strong></h5>
                         <audio allow="autoplay" id="player" controls>
-  <source src="https://stream.zeno.fm/2b7xrddbbshvv" type="audio/mp3" />
-  <source src="https://stream.zeno.fm/2b7xrddbbshvv" type="audio/ogg" />
+  <source src="https://streams.radio.co/s9ee62009a/listen" type="audio/mp3" />
+  <source src="https://streams.radio.co/s9ee62009a/listen" type="audio/ogg" />
 </audio>
                       
                       
@@ -378,46 +417,7 @@ redirect();
 
 
 </section>
-  <script> 
-    document.addEventListener('DOMContentLoaded', () => { 
-  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-  const player = new Plyr('#player');
-  
-  // Expose
-  window.player = player;
-
-  // Bind event listener
-  function on(selector, type, callback) {
-    document.querySelector(selector).addEventListener(type, callback, false);
-  }
-
-  // Play
-  on('.js-play', 'click', () => { 
-    player.play();
-  });
-
-  // Pause
-  on('.js-pause', 'click', () => { 
-    player.pause();
-  });
-
-  // Stop
-  on('.js-stop', 'click', () => { 
-    player.stop();
-  });
-
-  // Rewind
-  on('.js-rewind', 'click', () => { 
-    player.rewind();
-  });
-
-  // Forward
-  on('.js-forward', 'click', () => { 
-    player.forward();
-  });
-});
-  </script>
-    <script src='https://cdn.plyr.io/3.4.6/plyr.js'></script> <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script> <script src="assets/parallax/jarallax.js"></script><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> <script src="assets/embla/embla.min.js"></script>  <script src="assets/embla/script.js"></script>   
+ <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script> <script src="assets/parallax/jarallax.js"></script><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> <script src="assets/embla/embla.min.js"></script>  <script src="assets/embla/script.js"></script>   
   
   
 </body>
